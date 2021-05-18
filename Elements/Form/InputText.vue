@@ -11,14 +11,10 @@
 
 <script>
 
-import Utils from "../../Mixins/Utils";
 import {uuid} from "../../Mixins/Utilsv3";
 import {computed} from 'vue';
 
 export default {
-  mixins: [
-    Utils
-  ],
   props: {
     modelValue : {
       require: false
