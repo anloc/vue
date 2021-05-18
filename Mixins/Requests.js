@@ -12,5 +12,9 @@ export const updateRequest = function (url, data) {
             'Content-Type': 'application/merge-patch+json',
         },
     };
-    return axios.patch(url, data, config);
+    return axios.patch(process.env.MIX_API_PATH + url, data, config);
+}
+
+export const createRequest = function(url, data) {
+    return axios.post(process.env.MIX_API_PATH + url, data);
 }
